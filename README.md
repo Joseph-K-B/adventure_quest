@@ -12,3 +12,18 @@
 8) Consider your data model. What objects will you be using? What are the key/value pairs? What arrays do you need? What needs to live in local storage?
 9) Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.
 
+
+--four pages--
+1) Home/Main- username/class (input,radio,submit,h3)
+
+2) List- map/list of quests (generates three buttons/choices and map image)
+
+3) Quest page- targets specific objects in quest data array to display proper 'quest'
+
+4) Results- quest/gold outcome (generates final results after all quests completed)
+
+*each quest detail page will be generated on the same quest page using JS to target individual objects for each
+
+*quest page will need to generate h3, img, decription, radios, and submit
+
+*header must render/update proper hp/gold on each individual page

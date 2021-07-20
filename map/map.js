@@ -2,7 +2,10 @@
 import quests from '../data/quest-data.js';
 import { getPlayer } from '../data/storage-utils.js';
 import { questsComplete } from './quest-completed.js';
+
+
 const user = getPlayer();
+
 
 if (user.hp <= 0 || questsComplete(user)){
     window.location.replace('../results');
@@ -16,8 +19,6 @@ for (let quest of quests) {
     } else {
         createLink(quest);
     }
-
-
 }
 
 function createSpan(quest){
@@ -27,7 +28,7 @@ function createSpan(quest){
 }
 
 function createLink(quest){
-    const questLink = `..quest/?questId=${quest.id}`;
+    const questLink = `../quest/?questId=${quest.id}`;
     const newLink = document.createElement('a');
     newLink.href = questLink;
     newLink.textContent = quest.title;

@@ -1,11 +1,13 @@
-const PLAYER = 'PLAYER';
+const USER = 'USER';
 
 export function getPlayer(){
-    const playerString = localStorage.getItem(PLAYER);
+    const playerString = localStorage.getItem(USER);
     return JSON.parse(playerString);
 }
 
+
 export function setPlayer(playerObject){
+    console.log(playerObject);
     const playerString = JSON.stringify(playerObject);
-    localStorage.setItem(PLAYER, playerString);
+    localStorage.setItem(USER, playerString);
 }

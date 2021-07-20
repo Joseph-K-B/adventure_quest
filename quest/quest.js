@@ -1,10 +1,10 @@
 import quests from '../data/quest-data.js';
 import findById from '../data/findbyId.js';
-// import { getPlayer, setPlayer } from '../data/storage-utils.js';
+import { getPlayer, setPlayer } from '../data/storage-utils.js';
+
 
 
 const searchParams = new URLSearchParams(window.location.search);
-console.log(searchParams);
 
 const questTitle = document.getElementById('quest-title');
 const questImage = document.getElementById('quest-image');
@@ -31,3 +31,24 @@ for (let choice of quest.choices){
     label.append(radio, span);
     choices.append(label);
 }
+
+const questForm = document.getElementById('quest-form');
+questForm.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const choiceForm = new FormData(questForm);
+    const choiceValue = choiceForm.get('choice');
+    const choiceData = findById(quest.choices, choiceValue);
+
+
+    const user = getPlayer();
+    user.gold += choiceData.gold;
+    user.hp += choiceData.hp;
+    user.completed[quest.id] = true;
+    setPlayer(user);
+
+    const backLink = document.getElementById('back-link');
+    questDescription.textContent = choiceData.result;
+    questForm.classList.add('hidden');
+    backLink.classList.remove('hidden');
+
+});

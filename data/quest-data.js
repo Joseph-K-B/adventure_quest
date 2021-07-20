@@ -1,6 +1,6 @@
 const minotaur = {
     id: 'minotaur',
-    title: "The Minotaur's labyrinth",
+    title: "The Minotaur's Labyrinth",
     map: {
         top: '89%',
         left: '44%'
@@ -49,47 +49,41 @@ const medusa = {
         left: '37%'
     },
     image: 'dragon.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
     description: `
-        You run to a nearby village you have heard is being
-        terrorized by a dragon. Sure enough as you rent a room
-        in a local inn, you go outside and see the dragon about
-        to lay seige! What do you do?
+       While exploring a cavern off the coast of the Aegean Sea, you stumble upon statue.
+       Peculiar to find such amazing craftsmanship in the depths of a hole in the ground.
+       After pressing forward you pass by dozens of statues. Something isn't right, but you're
+       not sure what.
     `,
     choices: [{
-        id: 'run',
-        description: 'Get the hell out of the village',
+        id: 'investigate',
+        description: 'Delve further into the cavern to satisfy your curiosity',
         result: `
-            You high tail it in the opposite direction. Luckily,
-            in the panic you find a bag on the ground with 15 gold.
-            Unluckily, you trip over a discarded wagon wheel on your
-            way out of town and take 40 hp damage. 
+            You continue forward to find a pile of treasure in the depths of the cavern.
+            While collecting your find you here a a crash. Out of the corner of your eye
+            there appears to be someone in here with you. You call out and turn in their direction.
+            You've joined the hall of statues. 
         `,
         hp: -35,
         gold: 15
     }, {
-        id: 'fight',
-        description: 'Fiiiiiggghhhttt!',
+        id: 'leave',
+        description: 'Leave',
         result: `
-            You attempt to charge towards the dragon, who sees you approach
-            and let's loose a fireball. You wake up the next morning and the
-            village has been completely burned to the ground.
-            Oh, and you take 45 hp damage.
+            Something's off and you can feel it in your gut. Maybe its the statues,
+            maybe its hypoxia. It's probably best to turn around now. Upon this notion
+            you act galantly and run for the light.
         `,
         hp: -45,
         gold: 0
     }, {
-        id: 'archer',
-        description: 'Emulate that guy from LOR who shot an arrow',
+        id: 'read',
+        description: 'Research is Key',
         result: `
-            Inspired by the legend of Bard the Bowman, you notice a
-            stunned archer standing nearby and take their bow and quiver,
-            climb to the top of a tall tower and take aim. On the dragon's
-            next pass you steady your aim and let one fly. Amazingly,
-            you strike the dragon in the eye, piercing into the brain and
-            killing the dragon instantly. The villagers declare you their hero
-            and award you 90 gold.
+            As an avid reader you just so happen to be carrying a book on legends and myths.
+            You recall a certain chapter that reminds you of your current predicament.
+            Using the index you track down the legend of the medusa. Using your wits you utilize
+            your compact makeup mirror to behead the creature and the loot is yours.
         `,
         hp: 0,
         gold: 90
@@ -105,31 +99,30 @@ const cyclops = {
     },
     prerequisites: ['dragon', 'monsters'],
     image: 'treasure-chests.png',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+    audio: 'y',
+    action: 'z',
     description: `
-        As you enter the quest chamber you notice three chests before you.
-        Just as you start to imagine the wealth, you see a giant serpent
-        emerge from the back of the chamber. You'll need to make a run for it,
-        but you have time to open one chest before you take off. Which one 
-        do you choose?
+        You find a small island after weeks at sea It looks large enough to have fresh water and maybe some food to resupply for your voyage.
+        You decide to land and scout the region, Shortly after heading into the brush theres a large clearing with a beautiful pool of fresh water.
+        While refilling your canteen a thunderous crash is heard from close by. Upon veering in that direction you see a 15 foot tall ogre with one eye glaring
+        in your direction.
     `,
     choices: [{
-        id: 'wooden',
-        description: 'A Wooden Chest',
-        result: 'You grab 40 gold pieces!',
+        id: 'fight',
+        description: 'Stand your ground',
+        result: 'You remember reading in a pamphlet that Cyclops are more afraid of you than you are of them. Try to make yourself appear larger and yell.Instant death',
         hp: 0,
         gold: 40
     }, {
-        id: 'golden',
-        description: 'A Golden Chest',
-        result: 'Oh no! The chest is booby trapped with poison and you take 50 hp damage',
+        id: 'run',
+        description: 'Flee you fools',
+        result: 'You narrowly escape the swing of his club and race into the brush. Off to sea, its common knowledge that cyclops cant swim',
         hp: -50,
         gold: 0
     }, {
-        id: 'jeweled',
-        description: 'A Jeweled Chest',
-        result: 'A warm light engulfs you and you gain 35 hp',
+        id: 'charm',
+        description: 'Lay on the charm',
+        result: 'Despite popular belief, cyclops are actually very sensitive creatures. After spending a few hours working through some trauma and self-consiousness the beast is so grateful it offers you a reward',
         hp: 35,
         gold: 0
     }]

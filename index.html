@@ -18,15 +18,16 @@
     </header>
     
     <main>
-        <form action="">
-            <label for="">
+        <form id='player-form'>
+            <label for="name">
                 <p>
                     <h2>Choose wisely</h2>
                      Name
                     <input type="text" nae='name'>
                 </p>
             </label>
-            <p>
+            <fieldset>
+            <form>
                 <label for="class">
                     Spartan
                     <input type="radio" name='class' id='spartan' value='spartan'>
@@ -50,16 +51,17 @@
                     <input type="radio" name='class' id='philosopher' value='philosopher'>
                     <img src="./assets/philosopher_asset.png" alt="">
                 </label>
-            </p>
+            </form>
             <button>Begin your adventure</button>
         </form>
+    </fieldset>
     </main>
 
     <footer>
         &copy; 2021 Alchemy Code Lab
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./home/home.js"></script>
 </body>
 
 </html>

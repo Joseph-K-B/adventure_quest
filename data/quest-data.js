@@ -50,11 +50,11 @@ const medusa = {
     },
     image: 'dragon.jpg',
     description: `
-       While exploring a cavern off the coast of the Aegean Sea, you stumble upon statue.
+       While exploring a cavern off the coast of the Aegean Sea, you stumble upon a statue.
        Peculiar to find such amazing craftsmanship in the depths of a hole in the ground.
        After pressing forward you pass by dozens of statues. Something isn't right, but you're
        not sure what.
-    `,
+    `, 
     choices: [{
         id: 'investigate',
         description: 'Delve further into the cavern to satisfy your curiosity',

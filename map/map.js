@@ -6,7 +6,7 @@ const questList = document.getElementById('quest-list');
 for (let quest of quests) {
     const questLink = `../quest/?questId=${quest.id}`;
     console.log(questLink);
-    const newLink = document.createElement('x');
+    const newLink = document.createElement('a');
     newLink.href = questLink;
     newLink.textContent = quest.title;
     questList.appendChild(newLink);

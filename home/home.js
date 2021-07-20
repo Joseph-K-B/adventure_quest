@@ -8,5 +8,5 @@ playerForm.addEventListener('submit', event => {
     const formData = new FormData(playerForm);
     const newPlayer = createPlayer(formData);
     getPlayer(newPlayer);
-    window.location.replace('./map/map.html');
+    window.location.replace('./map');
 });

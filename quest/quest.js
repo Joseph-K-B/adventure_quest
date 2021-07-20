@@ -1,28 +1,33 @@
 import quests from '../data/quest-data.js';
-import findById from '../data/find-by-id.js';
+import findById from '../data/findbyId.js';
+// import { getPlayer, setPlayer } from '../data/storage-utils.js';
+
 
 const searchParams = new URLSearchParams(window.location.search);
+console.log(searchParams);
+
 const questTitle = document.getElementById('quest-title');
 const questImage = document.getElementById('quest-image');
 const questDescription = document.getElementById('quest-description');
-const choice = document.getElementById('choice');
+const choices = document.getElementById('choice');
 
 const quest = findById(quests, searchParams.get('questId'));
+console.log(quest);
 
 questTitle.textContent = quest.title;
-questImage.src = `..assets/quest/${quest.image}`;
+questImage.src = `..assets/quests/${quest.image}`;
 questDescription.textContent = quest.description;
 
-for (let pick of quest.choice){
+for (let choice of quest.choices){
     const label = document.createElement('label');
     const radio = document.createElement('input');
     radio.name = 'choice';
     radio.type = 'radio';
-    radio.value = pick.id;
+    radio.value = choice.id;
 
     const span = document.createElement('span');
-    span.textContent = pick.description;
+    span.textContent = choice.description;
 
     label.append(radio, span);
-    choice.append(label);
+    choices.append(label);
 }

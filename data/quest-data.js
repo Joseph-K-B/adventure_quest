@@ -110,19 +110,23 @@ const cyclops = {
     choices: [{
         id: 'fight',
         description: 'Stand your ground',
-        result: 'You remember reading in a pamphlet that Cyclops are more afraid of you than you are of them. Try to make yourself appear larger and yell.Instant death',
+        result: `You remember reading in a pamphlet that Cyclops are more afraid of you than you are of them. 
+        Try to make yourself appear larger and yell. Instant death`,
         hp: 0,
         gold: 40
     }, {
         id: 'run',
         description: 'Flee you fools',
-        result: 'You narrowly escape the swing of his club and race into the brush. Off to sea, its common knowledge that cyclops cant swim',
+        result: `You narrowly escape the swing of his club and race into the brush. 
+        Off to sea, its common knowledge that cyclops cant swim`,
         hp: -50,
         gold: 0
     }, {
         id: 'charm',
         description: 'Lay on the charm',
-        result: 'Despite popular belief, cyclops are actually very sensitive creatures. After spending a few hours working through some trauma and self-consiousness the beast is so grateful it offers you a reward',
+        result: `Despite popular belief, cyclops are actually very sensitive creatures. 
+        After spending a few hours working through some trauma and self-consiousness 
+        the beast is so grateful it offers you a reward`,
         hp: 35,
         gold: 0
     }]

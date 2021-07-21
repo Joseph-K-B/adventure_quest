@@ -8,7 +8,7 @@ const minotaur = {
     image: 'assets/quests/minotaur_asset_2.png',
     description: `
         As you turn corner after corner, lost in a sea of walls, you hear a roar in the distance. 
-        Clamouring and crashing the beast comes closer. You're survival is dependant on your next decision.
+        Clamouring and crashing the beast comes closer. Your survival is dependant on your next decision.
     `,
     choices: [{
         id: 'negotiate',

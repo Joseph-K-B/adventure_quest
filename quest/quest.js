@@ -1,6 +1,7 @@
 import quests from '../data/quest-data.js';
 import findById from '../data/findbyId.js';
 import { getPlayer, setPlayer } from '../data/storage-utils.js';
+import questScore from './score-quest.js';
 
 
 

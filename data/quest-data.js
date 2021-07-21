@@ -48,7 +48,7 @@ const medusa = {
         top: '17%',
         left: '37%'
     },
-    image: 'medusa_asset.jpeg',
+    image: 'assets/quests/medusa_asset.jpeg',
     description: `
        While exploring a cavern off the coast of the Aegean Sea, you stumble upon a statue.
        Peculiar to find such amazing craftsmanship in the depths of a hole in the ground.
@@ -98,7 +98,7 @@ const cyclops = {
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'cyclops_asset.png',
+    image: 'assets/quests/cyclops_asset.png',
     audio: 'y',
     action: 'z',
     description: `

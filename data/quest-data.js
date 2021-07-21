@@ -5,7 +5,7 @@ const minotaur = {
         top: '89%',
         left: '44%'
     },
-    image: 'monsters.jpg',
+    image: 'assets/quests/minotaur_asset_2.png',
     description: `
         As you turn corner after corner, lost in a sea of walls, you hear a roar in the distance. 
         Clamouring and crashing the beast comes closer. You're survival is dependant on your next decision.
@@ -28,7 +28,7 @@ const minotaur = {
             monster a best wishes letter. Go to battle and pray you brought something better
             than a dagger and your wits
         `,
-        hp: -30,
+        hp: -15,
         gold: 50
     }, {
         id: 'run',
@@ -36,7 +36,7 @@ const minotaur = {
         result: `
             You dont have to be faster than the Minotaur, merely your slowest companion.
         `,
-        hp: -50,
+        hp: 0,
         gold: 0
     }]
 };
@@ -48,7 +48,7 @@ const medusa = {
         top: '17%',
         left: '37%'
     },
-    image: 'dragon.jpg',
+    image: 'medusa_asset.jpeg',
     description: `
        While exploring a cavern off the coast of the Aegean Sea, you stumble upon a statue.
        Peculiar to find such amazing craftsmanship in the depths of a hole in the ground.
@@ -65,7 +65,7 @@ const medusa = {
             You've joined the hall of statues. 
         `,
         hp: -35,
-        gold: 15
+        gold: 0
     }, {
         id: 'leave',
         description: 'Leave',
@@ -74,7 +74,7 @@ const medusa = {
             maybe its hypoxia. It's probably best to turn around now. Upon this notion
             you act galantly and run for the light.
         `,
-        hp: -45,
+        hp: 0,
         gold: 0
     }, {
         id: 'read',
@@ -85,7 +85,7 @@ const medusa = {
             Using the index you track down the legend of the medusa. Using your wits you utilize
             your compact makeup mirror to behead the creature and the loot is yours.
         `,
-        hp: 0,
+        hp: -10,
         gold: 90
     }]
 };
@@ -98,7 +98,7 @@ const cyclops = {
         left: '5%'
     },
     prerequisites: ['dragon', 'monsters'],
-    image: 'treasure-chests.png',
+    image: 'cyclops_asset.png',
     audio: 'y',
     action: 'z',
     description: `
@@ -112,14 +112,14 @@ const cyclops = {
         description: 'Stand your ground',
         result: `You remember reading in a pamphlet that Cyclops are more afraid of you than you are of them. 
         Try to make yourself appear larger and yell. Instant death`,
-        hp: 0,
-        gold: 40
+        hp: -35,
+        gold: 0
     }, {
         id: 'run',
         description: 'Flee you fools',
         result: `You narrowly escape the swing of his club and race into the brush. 
         Off to sea, its common knowledge that cyclops cant swim`,
-        hp: -50,
+        hp: -5,
         gold: 0
     }, {
         id: 'charm',
@@ -128,7 +128,7 @@ const cyclops = {
         After spending a few hours working through some trauma and self-consiousness 
         the beast is so grateful it offers you a reward`,
         hp: 35,
-        gold: 0
+        gold: 50
     }]
 };
 

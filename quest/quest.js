@@ -12,10 +12,10 @@ const questDescription = document.getElementById('quest-description');
 const choices = document.getElementById('choice');
 
 const quest = findById(quests, searchParams.get('questId'));
-console.log(quest);
+
 
 questTitle.textContent = quest.title;
-questImage.src = `..assets/quests/${quest.image}`;
+questImage.src = `../${quest.image}`;
 questDescription.textContent = quest.description;
 
 for (let choice of quest.choices){

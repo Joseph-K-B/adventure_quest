@@ -7,7 +7,6 @@ export function getPlayer(){
 
 
 export function setPlayer(playerObject){
-    console.log(playerObject);
     const playerString = JSON.stringify(playerObject);
     localStorage.setItem(USER, playerString);
 }

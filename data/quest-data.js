@@ -112,7 +112,7 @@ const cyclops = {
         description: 'Stand your ground',
         result: `You remember reading in a pamphlet that Cyclops are more afraid of you than you are of them. 
         Try to make yourself appear larger and yell. Instant death`,
-        hp: -35,
+        hp: -60,
         gold: 0
     }, {
         id: 'run',

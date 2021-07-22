@@ -7,12 +7,11 @@ import { hpMessage, loseMessage, winMessage } from './messages.js';
 loadProfile();
 
 const user = getPlayer();
-
 const display = document.getElementById('x');
 
 const hpResult = hpScore(user.hp);
 const goldResult = goldScore(user.gold);
-const hpResults = hpMessage[hpResult];
+const hpMessages = hpMessage[hpResult];
 
 let goldMessages = null;
 if (hpResult === 'dead') {
@@ -26,6 +25,6 @@ const goldMessage = goldMessages[goldResult];
 
 let tale = 'Was it worth it?';
 tale += user.name + ' the ' + user.class + ', ';
-tale += hpMessage + ' and ' + goldMessage + '.';
+tale += hpMessages + ' and ' + goldMessage + '.';
 
 display.textContent = tale;

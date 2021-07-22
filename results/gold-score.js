@@ -3,7 +3,7 @@ function goldScore(gold){
         return 'broke as a joke';
     }
     else if (gold < 50) {
-        return 'middle-class';
+        return 'middleClass';
     }
     return 'hood-rich';
 }

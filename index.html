@@ -13,21 +13,56 @@
 
 <body>
     <header>
-        <h1>My App</h1>
-        <img src="assets/big-logo.png" />
+        <h1>Take an Adventure</h1>
+        
     </header>
     
     <main>
+        <form id='player-form'>
+            <label for="name">
+                <p>
+                    <h2>Adventurer Name:</h2>
+                     Name
+                    <input type="text" name='name'>
+                </p>
+            </label>
+            <fieldset>
+                <legend>Choose wisely</legend>
+                <div>
+                <label for="class">
+                    Spartan
+                    <input type="radio" name='class' id='spartan' value='spartan'>
+                    <img src="./assets/spartan_asset.png" alt="">
+                </label>
 
-        Make a Web App!
-        
+                <label for="class">
+                    Athenian
+                    <input type="radio" name='class' id='athenian' value='athenian'>
+                    <img src="./assets/athenian_asset.png" alt="">
+                </label>
+
+                <label for="class">
+                    Oracle
+                    <input type="radio" name='class' id='oracle' value='oracle'>
+                    <img src="./assets/oracle_asset.png" alt="">
+                </label>
+
+                <label for="class">
+                    Philosopher
+                    <input type="radio" name='class' id='philosopher' value='philosopher'>
+                    <img src="./assets/philosopher_asset.png" alt="">
+                </label>
+            </div>
+        </fieldset>
+            <button>Begin your adventure</button>
+        </form>
     </main>
 
     <footer>
         &copy; 2021 Alchemy Code Lab
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./home/home.js"></script>
 </body>
 
 </html>

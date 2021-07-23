@@ -3,7 +3,7 @@ import { createPlayer } from './add-user.js';
 
 const playerForm = document.getElementById('player-form');
 
-playerForm.addEventListener('submit', event => {
+playerForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const formData = new FormData(playerForm);
     const newPlayer = createPlayer(formData);

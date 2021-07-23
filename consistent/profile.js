@@ -1,5 +1,5 @@
 import { getPlayer } from '../data/storage-utils.js';
-import dead from './dead-player.js';
+
 
 function loadProfile() {
     const name = document.getElementById('name');
@@ -13,15 +13,9 @@ function loadProfile() {
         window.location = './';
     }
     name.textContent = user.name;
-    classes.src = '../assests/classes/' + user.class + '.png';
+    classes.src = '../assets/classes/' + user.class + '.png';
     gold.textContent = user.gold;
-
-    if (dead(user)) {
-        hp.textContent = 'Hella Dead';
-    }
-    else {
-        hp.textContent = user.hp;
-    }
+    hp.textContent = user.hp;
 }
 
 export default loadProfile;

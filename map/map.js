@@ -2,7 +2,9 @@
 import quests from '../data/quest-data.js';
 import { getPlayer } from '../data/storage-utils.js';
 import { questsComplete } from './quest-completed.js';
+import loadProfile from './load-profile.js';
 
+loadProfile();
 
 const user = getPlayer();
 

@@ -6,13 +6,20 @@ import { hpMessage, loseMessage, winMessage } from './messages.js';
 
 loadProfile();
 
-const user = getPlayer();
+const player = getPlayer();
+const deadOrAlive = document.getElementById('won-or-lose');
+const display = document.getElementById('display');
 
-const display = document.getElementById('x');
+const hpResult = hpScore(player.hp);
+const goldResult = goldScore(player.gold);
+const hpResultsText = hpMessage[hpResult];
 
-const hpResult = hpScore(user.hp);
-const goldResult = goldScore(user.gold);
-const hpResults = hpMessage[hpResult];
+let endText = null;
+if (hpResult === 'dead') {
+    endText = 'Better luck next time';
+} else {
+    endText = 'Fortune favors the bold!';
+}
 
 let goldMessages = null;
 if (hpResult === 'dead') {
@@ -24,8 +31,13 @@ else {
 
 const goldMessage = goldMessages[goldResult];
 
-let tale = 'Was it worth it?';
-tale += user.name + ' the ' + user.class + ', ';
-tale += hpMessage + ' and ' + goldMessage + '.';
-
+let tale = null;
+if (hpResult === 'dead') {
+    tale += player.name + ' the ' + player.class + ', ';
+    tale += hpResultsText + ' and ' + goldMessage + ' .';
+} else {
+    tale += player.name + ' the ' + player.class + ', ';
+    tale += hpResultsText + ' ' + goldMessages + '.';
+}
 display.textContent = tale;
+deadOrAlive.textContent = endText;

@@ -11,7 +11,7 @@ export const loseMessage = {
 };
 
 export const hpMessage = {
-    dead: 'Better luck next time',
-    frail: "You're not looking so good but still above ground",
-    healthy: 'All the right decisions have paid off'
+    dead: 'better luck next time',
+    frail: "you're not looking so good but still above ground",
+    healthy: 'all the right decisions have paid off'
 };

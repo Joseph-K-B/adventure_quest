@@ -13,7 +13,7 @@ function loadProfile() {
         window.location = './';
     }
     name.textContent = user.name;
-    classes.src = '../assests/classes/' + user.class + '.png';
+    classes.src = '../assets/' + user.class + '.png';
     gold.textContent = user.gold;
 
     if (dead(user)) {

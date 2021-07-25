@@ -7,8 +7,9 @@ import { hpMessage, loseMessage, winMessage } from './messages.js';
 loadProfile();
 
 const player = getPlayer();
-const deadOrAlive = document.getElementById('won-or-lose');
+const deadOrAlive = document.getElementById('win-or-lose');
 const display = document.getElementById('display');
+
 
 const hpResult = hpScore(player.hp);
 const goldResult = goldScore(player.gold);
@@ -29,15 +30,16 @@ else {
     goldMessages = winMessage;
 }
 
-const goldMessage = goldMessages[goldResult];
+const goldText = goldMessages[goldResult];
 
-let tale = null;
+let tale = 'After your adventure ';
 if (hpResult === 'dead') {
+     
     tale += player.name + ' the ' + player.class + ', ';
-    tale += hpResultsText + ' and ' + goldMessage + ' .';
+    tale += hpResultsText + ' and ' + goldText + ' .';
 } else {
     tale += player.name + ' the ' + player.class + ', ';
-    tale += hpResultsText + ' ' + goldMessages + '.';
+    tale += hpResultsText + '. ' + goldText + '.';
 }
 display.textContent = tale;
 deadOrAlive.textContent = endText;

@@ -1,11 +1,11 @@
 function hpScore(hp) {
     if (hp <= 0) {
-        return 'In the end, death comes for us all';
+        return 'dead';
     }
     if (hp < 15) {
-        return 'survival is our strongest instinct';
+        return 'weak';
     }
-    return 'alive and well as they say';
+    return 'healthy';
 }
 
 export default hpScore;

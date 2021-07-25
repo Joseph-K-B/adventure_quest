@@ -1,11 +1,11 @@
 function goldScore(gold){
     if (gold === 0) {
-        return 'broke as a joke';
+        return 'poor';
     }
     else if (gold < 50) {
-        return 'middle-class';
+        return 'modest';
     }
-    return 'hood-rich';
+    return 'rich';
 }
 
 export default goldScore;

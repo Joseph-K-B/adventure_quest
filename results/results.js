@@ -32,13 +32,14 @@ else {
 
 const goldText = goldMessages[goldResult];
 
-let tale = null;
+let tale = 'After your adventure ';
 if (hpResult === 'dead') {
+     
     tale += player.name + ' the ' + player.class + ', ';
     tale += hpResultsText + ' and ' + goldText + ' .';
 } else {
     tale += player.name + ' the ' + player.class + ', ';
-    tale += hpResultsText + ' ' + goldText + '.';
+    tale += hpResultsText + '. ' + goldText + '.';
 }
 display.textContent = tale;
 deadOrAlive.textContent = endText;

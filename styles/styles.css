@@ -17,6 +17,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 70px;
+    background-color: slategrey;
 }
 
 header img {
@@ -35,6 +37,31 @@ footer {
 }
 img{
     width: 8rem;
-    height: 12rem;
+    height: 10rem;
     margin: 5%;
 }
+body{
+    background-color: steelblue;
+}
+input{
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+}
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+/* input[type=radio]{
+    display: none;
+}
+input[type=radio]:checked + img{
+    border: 5px solid black;
+    filter: none;
+}
+img:hover{
+    filter: none;
+    border: 5px solid black;
+
+} */

@@ -2,6 +2,7 @@ header{
     height: 120px;
 }
 
-#profile{
-    width: 65px;
+.profile{
+    width: 100px;
+    height: 100px;
 }

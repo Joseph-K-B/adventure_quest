@@ -21,7 +21,7 @@ h1{
     font-size: 50px;
 }
 header{
-    background-color: rgb(105, 179, 169);
+    background-color: rgb(146, 219, 210);
 }
 #quest-list{
     display: flex;
@@ -30,4 +30,7 @@ header{
     align-items: center;
     padding: 30px;
     
+}
+body{
+    background-color: slategrey;
 }
